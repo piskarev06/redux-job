@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 import { Card } from "./Card";
 import { Badge } from "./Badge";
-import { Stack } from "./Stack";
+import { Stack } from "./Stack/Stack";
 
 interface JobPositionProps {
   id: number;

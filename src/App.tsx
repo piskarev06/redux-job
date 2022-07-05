@@ -1,10 +1,8 @@
 import React from "react";
 
-import "./App.css";
-
-import { Filter } from "./components/Filter";
-import { JobList } from "./components/JobList";
-import { Header } from "./components/Header";
+import { Filter } from "./components/Filter/Filter";
+import { JobList } from "./components/JobList/JobList";
+import { Header } from "./components/Header/Header";
 
 export const App = () => {
   return (
