@@ -17,7 +17,7 @@ interface JobPositionProps {
   contract: string;
   location: string;
   languages: string[];
-  tools: string[];
+  tools?: string[];
   handleAddFilter: (string: string) => void;
 }
 
@@ -38,7 +38,7 @@ export const JobPosition: FC<JobPositionProps> = ({
   handleAddFilter,
 }) => {
   //@ts-ignore
-  const badges = [].concat(role, level, ...languages, ...tools);
+  const badges = [].concat(role, level, ...languages, ...tools!);
 
   return (
     <Card isFeatured={featured}>

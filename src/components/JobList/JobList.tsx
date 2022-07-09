@@ -24,7 +24,6 @@ export const JobList: FC = () => {
   return (
     <div className={s.jobList}>
       {jobs.map((item) => (
-        // @ts-ignore
         <JobPosition
           key={item.id}
           handleAddFilter={handleAddFilter}
