@@ -28,7 +28,7 @@ npm install
 ```
 
 ```
-gulp
+npm start
 ```
 
 > Happy hacking!
