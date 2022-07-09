@@ -7,7 +7,10 @@ export const filtersReducer = (
 ): string[] => {
   switch (action.type) {
     case ADD_FILTER: {
-      return [...state, action.filter];
+      if (!state.includes(action.filter)) {
+        return [...state, action.filter];
+      }
+      return state;
     }
     case DELETE_FILTER: {
       return state.filter((filter) => {

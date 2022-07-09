@@ -18,6 +18,7 @@ interface JobPositionProps {
   location: string;
   languages: string[];
   tools: string[];
+  handleAddFilter: (string: string) => void;
 }
 
 export const JobPosition: FC<JobPositionProps> = ({
@@ -34,6 +35,7 @@ export const JobPosition: FC<JobPositionProps> = ({
   location,
   languages,
   tools,
+  handleAddFilter,
 }) => {
   //@ts-ignore
   const badges = [].concat(role, level, ...languages, ...tools);
@@ -71,7 +73,9 @@ export const JobPosition: FC<JobPositionProps> = ({
         </div>
         <Stack>
           {badges.map((item) => (
-            <Badge key={item}>{item}</Badge>
+            <Badge key={item} onClick={() => handleAddFilter(item)}>
+              {item}
+            </Badge>
           ))}
         </Stack>
       </div>
